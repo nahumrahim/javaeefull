@@ -1,0 +1,5 @@
+.jar
+.war
+data/target/*
+rest-api/target/*
+/**/nb-configuration.xml
