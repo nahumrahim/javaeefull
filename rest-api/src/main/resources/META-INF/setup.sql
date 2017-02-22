@@ -5,6 +5,8 @@ insert into usuario values(4,'Zahir','valor4');
 
 insert into CLIENT VALUES(1, 'nalarcon', 'Nahum Alarcon');
 insert into CLIENT VALUES(2, 'sgonzalez', 'Sofia Gonzalez');
+insert into CLIENT VALUES(3, 'ltorvalds', 'Linus Torvalds');
+insert into CLIENT VALUES(4, 'amacgyver', 'Angus MacGyver');
 
 insert into CLIENT_ADDRESS VALUES(1, 'Manhatan', 1);
 insert into CLIENT_ADDRESS VALUES(2, 'Dubai', 1);
