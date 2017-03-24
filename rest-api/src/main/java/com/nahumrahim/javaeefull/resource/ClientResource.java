@@ -1,11 +1,11 @@
-package com.example.resources;
+package com.nahumrahim.javaeefull.resource;
 
-import com.dto.ClientDto;
-import com.dto.NestedAddressDto;
-import com.example.entities.ClientEager;
-import com.example.entities.ClientEagerAddress;
-import com.example.entities.ClientLazy;
-import com.example.entities.ClientLazyAddress;
+import com.nahumrahim.javaeefull.dto.ClientDto;
+import com.nahumrahim.javaeefull.dto.NestedAddressDto;
+import com.nahumrahim.javaeefull.model.ClientEager;
+import com.nahumrahim.javaeefull.model.ClientEagerAddress;
+import com.nahumrahim.javaeefull.model.ClientLazy;
+import com.nahumrahim.javaeefull.model.ClientLazyAddress;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -24,7 +24,7 @@ import javax.ws.rs.core.Response;
 @Stateless
 public class ClientResource {
 
-    @PersistenceContext(unitName = "proyect1")
+    @PersistenceContext(unitName = "primary")
     EntityManager em;
     
     @GET

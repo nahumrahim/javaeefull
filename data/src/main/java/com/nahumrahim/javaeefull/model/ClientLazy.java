@@ -1,8 +1,7 @@
-package com.example.entities;
+package com.nahumrahim.javaeefull.model;
 
 import java.io.Serializable;
 import java.util.List;
-import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -17,8 +16,8 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author Nahum Rahim
  */
 @Entity
-@Table (name = "CLIENT")
-public class ClientEager implements Serializable {
+@Table(name = "CLIENT")
+public class ClientLazy implements Serializable {
     
     private static final long serialVersionUID = 1L;
 
@@ -28,10 +27,10 @@ public class ClientEager implements Serializable {
 
     String aliasCode;
     
-    String name;    
+    String name;
     
-    @OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
-    List <ClientEagerAddress> addresses;
+    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY)
+    List <ClientLazyAddress> addresses;
 
     public Integer getId() {
         return id;
@@ -58,11 +57,11 @@ public class ClientEager implements Serializable {
     }
 
     @XmlTransient
-    public List<ClientEagerAddress> getAddresses() {
+    public List<ClientLazyAddress> getAddresses() {
         return addresses;
     }
 
-    public void setAddresses(List<ClientEagerAddress> addresses) {
+    public void setAddresses(List<ClientLazyAddress> addresses) {
         this.addresses = addresses;
     }
     

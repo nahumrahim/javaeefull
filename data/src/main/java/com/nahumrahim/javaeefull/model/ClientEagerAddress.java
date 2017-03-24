@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.example.entities;
+package com.nahumrahim.javaeefull.model;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -21,7 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CLIENT_ADDRESS")
-public class ClientLazyAddress implements Serializable {
+public class ClientEagerAddress implements Serializable {
     private static final long serialVersionUID = 1L;
     
     @Id
@@ -31,7 +27,7 @@ public class ClientLazyAddress implements Serializable {
     private String address;
 
     @JoinColumn(name="ID_CLIENT", referencedColumnName = "ID")
-    @ManyToOne (fetch = FetchType.LAZY)
+    @ManyToOne (fetch = FetchType.EAGER)
     ClientEager client;
 
     public Integer getId() {

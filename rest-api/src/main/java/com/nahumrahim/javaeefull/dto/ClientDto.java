@@ -1,6 +1,5 @@
-package com.dto;
+package com.nahumrahim.javaeefull.dto;
 
-import com.example.entities.*;
 import java.util.List;
 
 /**

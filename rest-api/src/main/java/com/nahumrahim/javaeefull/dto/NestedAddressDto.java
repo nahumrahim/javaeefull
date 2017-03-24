@@ -1,4 +1,4 @@
-package com.dto;
+package com.nahumrahim.javaeefull.dto;
 
 /**
  *

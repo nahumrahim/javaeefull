@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.resources;
+package com.nahumrahim.javaeefull.resource;
 
-import com.example.daos.UsuarioDAO;
-import com.example.entities.Usuario;
+import com.nahumrahim.javaeefull.dao.UsuarioDao;
+import com.nahumrahim.javaeefull.model.Usuario;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -24,7 +24,7 @@ import javax.ws.rs.core.Response;
 public class UsuarioResource {
 
     @Inject
-    UsuarioDAO usuarioDao;
+    UsuarioDao usuarioDao;
 
     @GET
     @Produces({"application/json"})

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.resources;
+package com.nahumrahim.javaeefull.auth;
 
-import com.example.daos.UsuarioDAO;
+import com.nahumrahim.javaeefull.dao.UsuarioDao;
 import javax.ejb.EJB;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
@@ -22,7 +22,7 @@ import javax.ws.rs.core.Response;
 public class Auth {
     
     @EJB
-    UsuarioDAO dao;
+    UsuarioDao dao;
     
     @POST
     @Path("/login")

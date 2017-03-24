@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.example.daos;
+package com.nahumrahim.javaeefull.dao;
 
-import com.example.entities.Usuario;
+import com.nahumrahim.javaeefull.model.Usuario;
 import java.util.List;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
@@ -15,9 +11,10 @@ import javax.persistence.PersistenceContext;
  *
  * @author Nahum Rahim
  */
-public class UsuarioDAO {
+@Stateless
+public class UsuarioDao {
     
-    @PersistenceContext(unitName = "proyect1")
+    @PersistenceContext(unitName = "primary")
     EntityManager conexion;
     
     public List<Usuario> finAll()
